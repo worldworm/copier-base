@@ -1,0 +1,41 @@
+_subdirectory: template
+_templates_suffix: .jinja
+_answers_file: .copier-answers.base.yml
+
+project_name:
+  type: str
+  help: Project name
+
+project_description:
+  type: str
+  help: Project description
+
+project_emoji:
+  type: str
+  help: Project emoji
+  default: "🛠️"
+
+github_username:
+  type: str
+  help: GitHub username
+  default: "worldworm"
+
+github_repository_namespace:
+  type: str
+  help: Repository namespace
+  default: '{{ github_username }}'
+
+github_repository_name:
+  type: str
+  help: Repository name
+  default: "{{ project_name|lower|replace('_', '-')|replace(' ', '-') }}"
+
+copyright_year_start:
+  type: int
+  help: Copyright start year
+  default: 2023
+
+copyright_year_today:
+  type: int
+  help: Copyright today year
+  default: "{{ copyright_year_start }}"
