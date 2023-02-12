@@ -1,0 +1,12 @@
+# Changes here will be overwritten by Copier
+_commit: 99ae628
+_src_path: https://github.com/worldworm/copier-base.git
+copyright_year_start: 2023
+copyright_year_today: 2023
+github_repository_name: copier-base
+github_repository_namespace: worldworm
+github_username: worldworm
+project_description: Copier base template for worldworm GitHub projects.
+project_emoji: 📋
+project_name: copier-base
+
