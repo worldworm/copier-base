@@ -18,7 +18,6 @@ project_emoji:
 github_username:
   type: str
   help: GitHub username
-  default: "worldworm"
 
 github_repository_namespace:
   type: str
