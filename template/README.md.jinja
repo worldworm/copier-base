@@ -3,11 +3,13 @@
   <i>{{project_description}}</i>
 </p>
 
-## Why
-<!-- Write a short description of this project and why it might be helpful. Describe the idea behind it. -->
 
 > **Warning**
 > This project is in early development and may not work as expected.
+
+
+## Why
+<!-- Write a short description of this project and why it might be helpful. Describe the idea behind it. -->
 
 
 ## Installation
@@ -18,20 +20,25 @@ howtoinstall
 
 
 ## TODOS
-- [ ] add GitHub description
-- [ ] add GitHub topics
+- [ ] add {{repository_provider}} description
+- [ ] add {{repository_provider}} topics
+- [ ] update repository visibility
+{% if repository_provider == "GitHub" -%}
 - [ ] add GitHub social preview
 - [ ] enable GitHub discussions
+- [ ] pin repository to profile
 - [ ] enable GitHub dependency graph
 - [ ] enable GitHub Dependabot alerts
 - [ ] enable GitHub private vulnerability reporting
 - [ ] enable GitHub CodeQL scanning
 - [ ] enable GitHub secret scanning
-- [ ] update GitHub repository visibility
-- [ ] pin repository to profile
+{% endif -%}
+{% if repository_provider == "GitLab" -%}
+- [ ] enable GitLab project avatar
+{% endif %}
 
 ---
 <p align="center">
-  <i>© <a href="https://github.com/{{github_username}}">{{github_username}}</a> {{ copyright_year_start if copyright_year_start == copyright_year_today else copyright_year_start ~ "-" ~ copyright_year_today }}</i><br>
-  <i>Licensed under <a href="https://github.com/{{github_repository_namespace}}/{{github_repository_name}}/blob/main/LICENSE">MIT</a></i><br>
+  <i>© <a href="https://{{repository_host}}/{{repository_username}}">{{repository_username}}</a> {{ copyright_year_start if copyright_year_start == copyright_year_today else copyright_year_start ~ "-" ~ copyright_year_today }}</i><br>
+  <i>Licensed under <a href="{{repository_url}}/blob/main/LICENSE">MIT</a></i><br>
 </p>
