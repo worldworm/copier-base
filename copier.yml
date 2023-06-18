@@ -33,11 +33,6 @@ repository_username:
   type: str
   help: Repository username
 
-repository_namespace:
-  type: str
-  help: Repository namespace
-  default: "{{ repository_username }}"
-
 repository_name:
   type: str
   help: Repository name
@@ -46,8 +41,7 @@ repository_name:
 repository_url:
   type: str
   help: Repository URL
-  when: "{{ repository_provider == 'GitLab' }}"
-  default: "https://{{ repository_host }}/{{ repository_namespace }}/{{ repository_name }}"
+  default: "https://{{ repository_host if repository_provider == 'GitLab' else 'github.com' }}/{{ repository_username }}/{{ repository_name }}"
 
 copyright_year_start:
   type: int

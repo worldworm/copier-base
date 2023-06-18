@@ -39,6 +39,6 @@ howtoinstall
 
 ---
 <p align="center">
-  <i>© <a href="https://{{repository_host}}/{{repository_username}}">{{repository_username}}</a> {{ copyright_year_start if copyright_year_start == copyright_year_today else copyright_year_start ~ "-" ~ copyright_year_today }}</i><br>
+  <i>© <a href="https://{{ repository_host if repository_provider == 'GitLab' else 'github.com' }}/{{repository_username}}">{{repository_username}}</a> {{ copyright_year_start if copyright_year_start == copyright_year_today else copyright_year_start ~ "-" ~ copyright_year_today }}</i><br>
   <i>Licensed under <a href="{{repository_url}}/blob/main/LICENSE">MIT</a></i><br>
 </p>
