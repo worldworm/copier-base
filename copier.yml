@@ -2,46 +2,14 @@ _subdirectory: template
 _templates_suffix: .jinja
 _answers_file: .copier-answers.base.yml
 
-project_name:
-  type: str
-  help: Project name
-
-project_description:
-  type: str
-  help: Project description
+---
+!include shared-config/common.yml
+---
 
 project_emoji:
   type: str
   help: Project emoji
   default: "🛠️"
-
-repository_provider:
-  type: str
-  help: Repository provider
-  default: GitHub
-  choices:
-  - GitHub
-  - GitLab
-
-repository_host:
-  type: str
-  help: Repository host
-  when: "{{ repository_provider == 'GitLab' }}"
-  default: "{{ 'gitlab.com' if repository_provider == 'GitLab' else 'github.com' }}"
-
-repository_username:
-  type: str
-  help: Repository username
-
-repository_name:
-  type: str
-  help: Repository name
-  default: "{{ project_name|lower|replace('_', '-')|replace(' ', '-') }}"
-
-repository_url:
-  type: str
-  help: Repository URL
-  default: "https://{{ repository_host if repository_provider == 'GitLab' else 'github.com' }}/{{ repository_username }}/{{ repository_name }}"
 
 copyright_year_start:
   type: int
