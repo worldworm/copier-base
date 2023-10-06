@@ -1,0 +1,19 @@
+# Changes here will be overwritten by Copier
+_commit: v1.0.0
+_src_path: https://github.com/worldworm/copier-base-copier.git
+answersfile_suffix: base
+copyright_license: MIT
+copyright_year_start: 2023
+copyright_year_today: 2023
+is_meta: false
+need_trust: false
+project_description: Copier template for all projects.
+project_emoji: 📋
+project_name: copier-base
+ref_tech_url: ''
+repository_name: copier-base
+repository_provider: GitHub
+repository_url: https://github.com/worldworm/copier-base
+repository_username: worldworm
+warning_early_dev: false
+

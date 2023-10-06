@@ -1,3 +1,0 @@
-[submodule "shared-config"]
-	path = shared-config
-	url = https://github.com/worldworm/copier-shared-config
