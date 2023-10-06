@@ -1,15 +1,14 @@
-<h1 align="center">{{project_emoji}} {{project_name}}</h1>
+<h1 align="center">{{ project_emoji }} {{ project_name }}</h1>
 <p align="center">
-  <i>{{project_description}}</i>
+  <i>{{ project_description }}</i>
 </p>
 
 
+<!-- Place https://shields.io/ badges here -->
+
+{% if warning_early_dev -%}
 > **Warning**
 > This project is in early development and may not work as expected.
-
-
-## Why
-<!-- Write a short description of this project and why it might be helpful. Describe the idea behind it. -->
 
 
 ## Installation
@@ -24,6 +23,7 @@ howtoinstall
 - [ ] add {{repository_provider}} topics
 - [ ] update repository visibility
 {% if repository_provider == "GitHub" -%}
+- [ ] remove Packages/Deployments
 - [ ] add GitHub social preview
 - [ ] enable GitHub discussions
 - [ ] pin repository to profile
@@ -39,6 +39,6 @@ howtoinstall
 
 ---
 <p align="center">
-  <i>© <a href="https://{{ repository_host if repository_provider == 'GitLab' else 'github.com' }}/{{repository_username}}">{{repository_username}}</a> {{ copyright_year_start if copyright_year_start == copyright_year_today else copyright_year_start ~ "-" ~ copyright_year_today }}</i><br>
-  <i>Licensed under <a href="{{repository_url}}/blob/main/LICENSE">MIT</a></i><br>
+  <i>© <a href="https://{{ repository_host if repository_provider == 'GitLab' else 'github.com' }}/{{ repository_username }}">{{ repository_username }}</a> {{ copyright_year_start if copyright_year_start == copyright_year_today else copyright_year_start ~ "-" ~ copyright_year_today }}</i><br>
+  <i>Licensed under <a href="{{ repository_url }}/blob/main/LICENSE">MIT</a></i><br>
 </p>
