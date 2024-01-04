@@ -55,7 +55,7 @@ project_emoji:
 copyright_year_start:
   type: int
   help: Copyright start year
-  default: 2023
+  default: 2024
 
 copyright_year_today:
   type: int
