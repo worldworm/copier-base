@@ -21,6 +21,13 @@
 {% endif -%}
 [![GitLab last commit (main)](https://img.shields.io/gitlab/last-commit/{{ repository_username }}/{{ repository_name }}?ref=main)]({{ repository_url }}/commits/main/)
 [![GitLab release](https://img.shields.io/gitlab/v/release/{{ repository_username }}/{{ repository_name }})]({{ repository_url }}/-/releases/permalink/latest)
+{% endif -%}
+{% if "PyPI" in badges -%}
+[![PyPI version](https://img.shields.io/pypi/v/{{ repository_name }})](https://pypi.org/project/{{ repository_name }}/)
+[![PyPI Python version](https://img.shields.io/pypi/pyversions/{{ repository_name }})](https://pypi.org/project/{{ repository_name }}/)
+{% endif -%}
+{% if "Docker" in badges -%}
+[![Docker Pulls](https://img.shields.io/docker/pulls/{{ repository_username }}/{{ repository_name }}?logo=docker)](https://hub.docker.com/r/{{ repository_username }}/{{ repository_name }})
 {% endif %}
 
 {% if warning_early_dev -%}

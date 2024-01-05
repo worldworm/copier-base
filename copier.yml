@@ -66,3 +66,11 @@ warning_early_dev:
   type: bool
   help: Add "early dev" warning?
   default: true
+
+badges:
+  type: str
+  multiselect: true
+  help: Custom badges
+  choices:
+   - PyPI
+   - Docker
